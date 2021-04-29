@@ -40,7 +40,12 @@ public class InfoActivity extends AppCompatActivity {
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Qayyum Codes
             public void onClick(View v) {
+                Intent i = new Intent(InfoActivity.this,
+                        AddActivity.class);
+
+                startActivity(i);
 
             }
         });
@@ -68,7 +73,7 @@ public class InfoActivity extends AppCompatActivity {
 
                 email.setType("message/rfc822");
 
-                startActivity(Intent.createChooser(email,"Choose an Email client :"));
+                startActivity(Intent.createChooser(email, "Choose an Email client :"));
 
             }
         });

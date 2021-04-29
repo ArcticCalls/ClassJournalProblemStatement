@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+
+//Qayyum Codes
 public class MainActivity extends AppCompatActivity {
     TextView tvModuleCode;
 
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this,
                         InfoActivity.class);
 
-                //i.putExtra("module", c347);
+                i.putExtra("module", c347);
                 startActivity(i);
             }});
 
