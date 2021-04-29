@@ -37,7 +37,12 @@ public class InfoActivity extends AppCompatActivity {
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Qayyum Codes
             public void onClick(View v) {
+                Intent i = new Intent(InfoActivity.this,
+                        AddActivity.class);
+
+                startActivity(i);
 
             }
         });
