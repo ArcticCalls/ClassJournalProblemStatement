@@ -2,7 +2,9 @@ package com.yeehungchong.classjournal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -25,7 +27,22 @@ public class AddActivity extends AppCompatActivity {
         rgGrade = findViewById(R.id.radioGroup);
         tvWeek = findViewById(R.id.textViewWeek);
 
+        Intent i = getIntent();
+//        int wkNum = i.getIntExtra("currWk",0) + 1;
+//        tvWeek.setText("Week " + (wkNum));
         
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int selectedID = rgGrade.getCheckedRadioButtonId();
+                rbGrade = findViewById(selectedID);
+                Intent i = new Intent();
+                i.putExtra("grade", rbGrade.getText().toString());
+//                i.putExtra("week", wkNum);
+                setResult(RESULT_OK, i);
+                finish();
+            }
+        });
 
     }
 }
