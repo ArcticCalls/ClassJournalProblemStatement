@@ -6,13 +6,18 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class InfoActivity extends AppCompatActivity {
 
     Button btnAdd, btnInfo, btnEmail;
-
-
+    ListView lv;
+    ArrayAdapter aa;
+    ArrayList<GradeInfo> grade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,13 @@ public class InfoActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.buttonAdd);
         btnInfo = findViewById(R.id.buttonInfo);
         btnEmail = findViewById(R.id.buttonEmail);
+        lv = (ListView) this.findViewById(R.id.lvGrade);
+
+        // Create a few food objects in Food array
+        grade = new ArrayList<GradeInfo>();
+        grade.add(new GradeInfo(1, "Hello", "A"));
+        grade.add(new GradeInfo(2, "Bye", "B"));
+        grade.add(new GradeInfo(3, "See ya", "C"));
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
