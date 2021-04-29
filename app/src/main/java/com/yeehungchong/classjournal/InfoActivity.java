@@ -70,7 +70,7 @@ public class InfoActivity extends AppCompatActivity {
 
                 email.setType("message/rfc822");
 
-                startActivity(Intent.createChooser(email,"Choose an Email client :"));
+                startActivity(Intent.createChooser(email, "Choose an Email client :"));
 
             }
         });
