@@ -15,29 +15,12 @@ public class GradeInfo {
         return week;
     }
 
-    public void setWeek(int week) {
-        this.week = week;
-    }
-
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getGrade() {
         return grade;
     }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
-
-
-
-
-
 
 }

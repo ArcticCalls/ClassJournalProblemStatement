@@ -2,7 +2,6 @@ package com.yeehungchong.classjournal;
 
 import java.io.Serializable;
 
-//Qayyum Codes
 public class Module implements Serializable {
     private String module;
 

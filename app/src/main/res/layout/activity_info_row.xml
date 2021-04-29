@@ -10,7 +10,9 @@
         android:id="@+id/tvWeek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:background="#ADD8E6"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +34,9 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#DAA520"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvGrade"

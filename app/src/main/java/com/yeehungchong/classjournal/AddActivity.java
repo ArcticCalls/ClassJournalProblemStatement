@@ -28,9 +28,9 @@ public class AddActivity extends AppCompatActivity {
         tvWeek = findViewById(R.id.textViewWeek);
 
         Intent i = getIntent();
-//        int wkNum = i.getIntExtra("currWk",0) + 1;
-//        tvWeek.setText("Week " + (wkNum));
-        
+        int weekNum = i.getIntExtra("currentWeek",0) + 1;
+        tvWeek.setText("Week " + weekNum);
+
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +38,7 @@ public class AddActivity extends AppCompatActivity {
                 rbGrade = findViewById(selectedID);
                 Intent i = new Intent();
                 i.putExtra("grade", rbGrade.getText().toString());
-//                i.putExtra("week", wkNum);
+                i.putExtra("week", weekNum);
                 setResult(RESULT_OK, i);
                 finish();
             }
