@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tvModuleCode = (TextView) findViewById(R.id.textViewModuleCode);
-
         // Set listener
         tvModuleCode.setOnClickListener(new View.OnClickListener(){
             @Override
