@@ -20,6 +20,7 @@ public class InfoActivity extends AppCompatActivity {
     ArrayAdapter aa;
     ArrayList<GradeInfo> grade;
     String emailMessage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +29,17 @@ public class InfoActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.buttonAdd);
         btnInfo = findViewById(R.id.buttonInfo);
         btnEmail = findViewById(R.id.buttonEmail);
-        lv = (ListView) this.findViewById(R.id.lvGrade);
+        lv = findViewById(R.id.lvGrade);
 
         // Create a few food objects in Food array
         grade = new ArrayList<GradeInfo>();
         grade.add(new GradeInfo(1, "Hello", "A"));
         grade.add(new GradeInfo(2, "Bye", "B"));
         grade.add(new GradeInfo(3, "See ya", "C"));
+
         aa = new GradeAdapter(this, R.layout.activity_info_row, grade);
         lv.setAdapter(aa);
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             //Qayyum Codes
