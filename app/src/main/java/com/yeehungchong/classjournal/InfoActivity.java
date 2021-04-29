@@ -45,6 +45,8 @@ public class InfoActivity extends AppCompatActivity {
                 Intent i = new Intent(InfoActivity.this,
                         AddActivity.class);
 
+                Module module = (Module) i.getSerializableExtra("module");
+
                 startActivity(i);
 
             }
