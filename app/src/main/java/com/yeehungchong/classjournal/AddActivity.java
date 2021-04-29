@@ -22,8 +22,10 @@ public class AddActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add);
 
         btnSubmit = findViewById(R.id.buttonSubmit);
-        rgGrade = findViewById(R.id.radioGrades);
-        tvWeek = findViewById(R.id.weekNumber);
+        rgGrade = findViewById(R.id.radioGroup);
+        tvWeek = findViewById(R.id.textViewWeek);
+
+        
 
     }
 }
