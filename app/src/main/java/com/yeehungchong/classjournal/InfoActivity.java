@@ -57,7 +57,7 @@ public class InfoActivity extends AppCompatActivity {
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Jun Yang Codes
+
                 Intent infoIntent = new Intent(Intent.ACTION_VIEW);
                 infoIntent.setData(Uri.parse("https://www.rp.edu.sg/SOI/full-time-diplomas/Details/diploma-in-digital-design-and-development"));
                 startActivity(infoIntent);
@@ -68,16 +68,17 @@ public class InfoActivity extends AppCompatActivity {
         btnEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Jun Yang Codes
+
                 Intent email = new Intent(Intent.ACTION_SEND);
 
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{"jason_lim@rp.edu.sg"});
                 email.putExtra(Intent.EXTRA_SUBJECT, "Test Email from C347");
                 for (int i =0; i <grade.size(); i++){
                    emailMessage += "Week " + grade.get(i).getWeek() + ": "+ grade.get(i).getTitle() + ": " + grade.get(i).getGrade() + "\n";
-                }
-                email.putExtra(Intent.EXTRA_TEXT, "Hi Faci, \n" + "I am..." + "\n Please see my remarks so far, thank you! \n" + emailMessage  );
 
+                }
+                email.putExtra(Intent.EXTRA_TEXT, "Hi Faci, \n" + "I am..." + "\n Please see my remarks so far, thank you! \n" + emailMessage);
+                emailMessage = "";
                 email.setType("message/rfc822");
 
                 startActivity(Intent.createChooser(email, "Choose an Email client :"));
