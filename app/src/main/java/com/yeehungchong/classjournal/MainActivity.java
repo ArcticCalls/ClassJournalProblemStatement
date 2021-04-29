@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 //Qayyum Codes
 public class MainActivity extends AppCompatActivity {
+    int requestCodeForModule = 1;
     TextView tvModuleCode;
 
     @Override
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                         InfoActivity.class);
 
                 i.putExtra("module", c347);
-                startActivity(i);
+                startActivityForResult(i,requestCodeForModule);
             }});
 
     }
