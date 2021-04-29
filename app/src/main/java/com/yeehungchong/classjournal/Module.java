@@ -1,5 +1,6 @@
 package com.yeehungchong.classjournal;
 
+//Qayyum Codes
 public class Module {
     private String module;
 
