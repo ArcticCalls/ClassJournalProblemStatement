@@ -49,7 +49,7 @@ public class GradeAdapter extends ArrayAdapter<GradeInfo> {
         GradeInfo currentGrade = grade.get(position);
         // Set the TextView to show the food
 
-        tvWeek.setText(currentGrade.getWeek());
+        tvWeek.setText(currentGrade.getWeek()+"");
         tvTitle.setText(currentGrade.getTitle());
         tvGrade.setText(currentGrade.getGrade());
 
