@@ -35,6 +35,9 @@ public class InfoActivity extends AppCompatActivity {
         grade.add(new GradeInfo(2, "Bye", "B"));
         grade.add(new GradeInfo(3, "See ya", "C"));
 
+        aa = new GradeAdapter(this, R.layout.activity_info_row, grade);
+        lv.setAdapter(aa);
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             //Qayyum Codes
