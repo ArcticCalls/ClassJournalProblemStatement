@@ -19,7 +19,7 @@ public class InfoActivity extends AppCompatActivity {
     ListView lv;
     ArrayAdapter aa;
     ArrayList<GradeInfo> grade;
-    String emailMessage;
+    String emailMessage = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +74,7 @@ public class InfoActivity extends AppCompatActivity {
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{"jason_lim@rp.edu.sg"});
                 email.putExtra(Intent.EXTRA_SUBJECT, "Test Email from C347");
                 for (int i =0; i <grade.size(); i++){
-                    emailMessage += "Week " + grade.get(i).getWeek() + ": "+ grade.get(i).getTitle() + ": " + grade.get(i).getGrade() + "\n";
-
+                   emailMessage += "Week " + grade.get(i).getWeek() + ": "+ grade.get(i).getTitle() + ": " + grade.get(i).getGrade() + "\n";
                 }
                 email.putExtra(Intent.EXTRA_TEXT, "Hi Faci, \n" + "I am..." + "\n Please see my remarks so far, thank you! \n" + emailMessage  );
 
